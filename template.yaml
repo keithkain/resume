@@ -1,9 +1,7 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  cloud-resume
-
-  Sample SAM Template for cloud-resume
+  SAM template for cloud-resume
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -22,14 +20,14 @@ Resources:
   MyRoute53Record:
     Type: "AWS::Route53::RecordSetGroup"
     Properties:
-      HostedZoneId: Z09829841YUA6GNYIS9FN # TODO: Don't hardcode me
+      HostedZoneId: Z09829841YUA6GNYIS9FN
       RecordSets:
-        - Name: resume.keithkain.com # TODO: Don't hardcode me
+        - Name: resume.keithkain.com
           Type: A
           AliasTarget:
             HostedZoneId: Z2FDTNDATAQYW2
             DNSName: !GetAtt CloudFrontDist.DomainName
-        - Name: keithkain.com # TODO: Don't hardcode me
+        - Name: keithkain.com
           Type: A
           AliasTarget:
             HostedZoneId: Z09829841YUA6GNYIS9FN
@@ -100,7 +98,7 @@ Resources:
       Bucket: !Ref s3StaticResume
 
   GetDBFunction:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Type: AWS::Serverless::Function
     Properties:
       Policies:
         - DynamoDBCrudPolicy:
@@ -112,7 +110,7 @@ Resources:
         - x86_64
       Events:
         CatchAll:
-          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Type: Api
           Properties:
             Path: /get
             Method: get
@@ -134,16 +132,3 @@ Resources:
           Properties:
             Path: /put
             Method: get
-# Outputs:
-# ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
-# Find out more about other implicit resources you can reference within SAM
-# https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
-#HelloWorldApi:
-#  Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-#  Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
-#HelloWorldFunction:
-#  Description: "Hello World Lambda Function ARN"
-#  Value: !GetAtt HelloWorldFunction.Arn
-#HelloWorldFunctionIamRole:
-#  Description: "Implicit IAM Role created for Hello World function"
-#  Value: !GetAtt HelloWorldFunctionRole.Arn
