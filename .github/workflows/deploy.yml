@@ -1,4 +1,4 @@
-name: SAM Validate, Test, Build, Deploy
+name: SAM CICD workflow
 on:
   push:
     branches: [ main ]
