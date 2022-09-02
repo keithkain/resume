@@ -27,16 +27,16 @@ jobs:
         run: |
           sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
 
-  #upload-website-to-s3:
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - uses: actions/checkout@v2
-  #    - uses: aws-actions/configure-aws-credentials@v1
-  #      with:
-  #        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-  #        aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-  #        aws-region: us-east-1
-  #    - run: aws s3 sync ./resume-site s3://keithkain-cv
+  upload-website-to-s3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - run: aws s3 sync ./resume-site s3://keithkain-cv
   
   test-db-infra:
     needs: build-and-deploy-infra
