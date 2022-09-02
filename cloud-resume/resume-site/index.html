@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Keith Kain Resume</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Resume/CV Template for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Google Font -->
+    <link
+        href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/orbit-1.css">
+
+    <script>
+        fetch('https://2kfwqnp01i.execute-api.us-east-1.amazonaws.com/Prod/put')
+            .then(() => fetch('https://2kfwqnp01i.execute-api.us-east-1.amazonaws.com/Prod/get'))
+            .then(response => response.json())
+            .then((data) => {
+                document.getElementById('visitorcount').innerText = data
+            })
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper mt-lg-5">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile" src="assets/images/profile.png" alt="" />
+                <h1 class="name">Keith Kain</h1>
+                <h3 class="tagline">IT Systems Engineer</h3>
+                <br>
+                <h3 class="tagline">Pittsburgh, PA</h3>
+            </div>
+            <!--//profile-container-->
+
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email"><i class="fa-solid fa-envelope"></i><a
+                            href="mailto: keithkain15@gmail.com">keithkain15@gmail.com</a></li>
+                    <li class="phone"><i class="fa-solid fa-phone"></i><a href="tel:724-762-8633">724-762-8633</a></li>
+                    <li class="linkedin"><i class="fa-brands fa-linkedin-in"></i><a
+                            href="https://www.linkedin.com/in/keith-kain-771493160" target="_blank">Keith Kain on
+                            LinkedIn</a></li>
+                    <p><strong>Visitors: </strong><span id="visitorcount" /></p>
+                </ul>
+            </div>
+
+
+            <div data-iframe-width="175" data-iframe-height="250"
+                data-share-badge-id="fd2f2680-2479-46ff-9ecb-3ffa003091a4"
+                data-share-badge-host="https://www.credly.com"></div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+            <!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                <div class="item">
+                    <h4 class="degree">BS - Digital Media Production</h4>
+                    <h5 class="meta">Indiana University of Pennsylvania - 2016</h5>
+                </div>
+                <!--//item-->
+            </div>
+            <!--//education-container-->
+
+            <!--//interests-->
+
+            <div class="interests-container container-block">
+                <h2 class="container-block-title">Interests</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Cycling, Music, Cooking, Tea, Sports</li>
+                </ul>
+            </div>
+            <!--//interests-->
+
+        </div>
+        <!--//sidebar-wrapper-->
+
+        <div class="main-wrapper">
+
+            <section class="section summary-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fa-solid fa-user"></i></span>Career
+                    Profile</h2>
+                <div class="summary">
+                    <p>Hi, I'm Keith Kain, a 10+ year IT professional with a focus in infrastructure configuration
+                        management, cloud technologies, and all things automation. I have excellent troubleshooting
+                        skills, a team-oriented mindset, and a
+                        passion for learning new technologies.</p>
+
+                    <p> <strong>This resume is a multi-tiered proof of concept running on
+                            AWS, utilizing services like S3, Lambda, and CloudFormation to serve content in a
+                            serverless architecture -- version-controlled and deployed through a CI/CD pipeline.
+                        </strong></p>
+                </div>
+                <!--//summary-->
+
+                <h6> You can <a
+                        href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/orbit-free-resume-cv-bootstrap-theme-for-developers/"
+                        target="_blank">read about the design/architecture here. </a>
+                </h6>
+            </section>
+            <!--//section-->
+
+            <section class="skills-section section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fa-solid fa-rocket"></i></span>Skills
+                    &amp; Proficiency</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5>AWS Cloud: </h5>
+                            <p>Implementing highly-available, cost-conscious, and scalable architectures secured with
+                                the
+                                principle of least-privilege and deployed using infrastructure-as-code (IaC) methods
+                                including CloudFormation and Terraform. <strong>I currently hold an AWS Certified
+                                    Solutions Architect certification.</strong></p>
+                            <h5>Infrastructure Orchestration/Administration: </h5>
+                            <p>with tools such as SCCM, MDT, Red Hat Satellite, Docker, Ansible, Puppet, SAM-CLI, etc
+                            </p>
+                            <h5>Scripting/Automation Experience: </h5>
+                            <p>Powershell, Python, Bash, working with Lambda, creating/working with APIs.</p>
+                            <h5>Monitoring/Logging Experience: </h5>
+                            <p> with Grafana/Prometheus, Loki, Zenoss, CloudWatch - designing alert-based remediation
+                                processes</p>
+                            <h5>Identity and User Management: </h5>
+                            <p> Integrating services using Active Directory, LDAP, Shibboleth, AWS IAM. </p>
+                            <h5>Networking Experience: </h5>
+                            <p> DNS, Load balancing, SSL, VPC Routing, Nginx/IIS/Apache hosting and configuration, etc
+                            </p>
+                            <h5>Windows Server Administration: </h5>
+                            <p> Active Directory, Remote Desktop Services/RemoteApp, DFS, Bitlocker Administration,
+                                Powershell App Deploy Toolkit, etc</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--//skills-section-->
+
+            <section class="section experiences-section">
+                <h2 class="section-title"><span class="icon-holder"><i
+                            class="fa-solid fa-briefcase"></i></span>Experiences</h2>
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Systems/Software Engineer</h3>
+                            <div class="time">2022 - Present</div>
+                        </div>
+                        <!--//upper-row-->
+                        <div class="company">Carnegie Mellon University - College of Engineering</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <p>- Implement change/version control system for code/scripts and CI pipelines for immediate
+                            delivery of production code and configuration files.</p>
+                        <p>- Write and maintain Powershell middleware libraries and APIs to manage dependencies and task
+                            sets within current infrastructure .</p>
+                        <p>- Evaluate, rewrite, and migrate legacy code to new environments to allow for consistent
+                            updates and prevent environment stagnation/technical debt.</p>
+                        <p>- Spearhead new technologies - identify environmental workflow challenges and implement
+                            solutions. </p>
+                    </div>
+                    <!--//details-->
+                </div>
+                <!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Systems Administrator</h3>
+                            <div class="time">2019 - 2022</div>
+                        </div>
+                        <!--//upper-row-->
+                        <div class="company">Carnegie Mellon University - College of Engineering</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <p>- Advanced Windows infrastructure and client endpoint System Administration using
+                            industry-standard toolsets - MDT, SCCM, WSUS, Powershell, etc. </p>
+                        <p>- Windows Operating system deployment, packaging and licensing of enterprise and engineering
+                            software stacks. </p>
+                        <p>- Perform basic administration of Linux servers and compute endpoints running RHEL using Red
+                            Hat Satellite/Puppet. </p>
+                        <p>- Implement MacOS Jamf Pro deployment solution including Automated Device Enrollment
+                            workflow. </p>
+                        <p>- Remotely manage Windows and MacOS devices, including software updates, package
+                            installations, configuration policies, group policies, etc</p>
+                        <p>- Implement automation solutions using Powershell, Python, and other standard automation
+                            toolsets.</p>
+
+                    </div>
+                    <!--//details-->
+                </div>
+                <!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">IT Generalist/Systems Administrator</h3>
+                            <div class="time">2017-2019</div>
+                        </div>
+                        <!--//upper-row-->
+                        <div class="company">Slippery Rock University</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <p>- Manage OS config & patching of 3000+ client systems in Windows/Mac environment using
+                            RMM/MDM solutions</p>
+                        <p>- Led a project team to migrate 2000+ Windows 7 PCs to Windows 10.</p>
+                        <p>- Special-projects lead, design/implement Powershell/Python automation systems to solve
+                            specific client issues. .</p>
+                    </div>
+                    <!--//details-->
+                </div>
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Assistant to the Director of Educational Technology</h3>
+                            <div class="time">2011-2017</div>
+                        </div>
+                        <!--//upper-row-->
+                        <div class="company">Reynolds School District</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <p>- Implement efficient Windows build automation workflow using MDT, WDS, Powershell (migrated
+                            from 'ghosting' thick images)</p>
+                        <p>- Create and maintain user accounts in various student education systems using standard IAM
+                            solutions</p>
+                        <p>- Basic end-user/deskside support for IT and AV classroom scenarios</p>
+                    </div>
+                    <!--//details-->
+                </div>
+                <!--//item-->
+
+            </section>
+            <!--//section-->
+
+
+
+        </div>
+        <!--//main-body-->
+    </div>
+
+    <footer class="footer">
+        <div class="text-center">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fa-solid fa-heart"></i> by <a
+                    href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+</body>
+
+</html>
