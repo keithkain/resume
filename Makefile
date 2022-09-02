@@ -14,8 +14,8 @@ invoke-put:
 
 integration-test:
 	apiUrl=https://2kfwqnp01i.execute-api.us-east-1.amazonaws.com/Prod 
-	FIRST=$(curl -s "$apiUrl/get" | jq tonumber); \
-    curl -s "$apiUrl/put"; \
+	FIRST=$$(curl -s "$$apiUrl/get" | jq tonumber); \
+    curl -s "$$apiUrl/put"; \
 	SECOND=$(curl -s "$apiUrl/get" | jq tonumber); \
-    echo "Comparing if first count ($FIRST) is less than (<) second count ($SECOND)"; \
-	if [[ $FIRST -le $SECOND ]]; then echo "PASS"; else echo "FAIL";  fi
+    echo "Comparing if first count ($$FIRST) is less than (<) second count ($$SECOND)"; \
+	if [[ $$FIRST -le $$SECOND ]]; then echo "PASS"; else echo "FAIL";  fi
