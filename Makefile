@@ -18,4 +18,4 @@ integration-test:
     curl -s "$$apiUrl/put"; \
 	SECOND=$(curl -s "$apiUrl/get" | jq tonumber); \
     echo "Comparing if first count ($$FIRST) is less than (<) second count ($$SECOND)"; \
-	if [[ $$FIRST -le $$SECOND ]]; then echo "PASS"; else echo "FAIL";  fi
+	if [ $$FIRST -le $$SECOND ]; then echo "PASS"; else echo "FAIL";  fi
